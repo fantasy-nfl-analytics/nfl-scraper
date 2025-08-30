@@ -3,7 +3,7 @@ name = "nfl-webscraper"
 description = "Scrape NFL player and team statistics (multi-year, async, Polars)."
 readme = "README.md"
 license = { file = "LICENSE" }
-dynamic = ["version"]
+version = "0.1.2"
 authors = [ { name = "Joshua Gorton", email = "jgorton1337@gmail.com" } ]
 requires-python = ">=3.13"
 dependencies = [

@@ -13,6 +13,6 @@ from .api import get_all_player_stats, get_all_team_stats
 try:  # Resolve version from the distribution metadata
 	__version__ = _md.version("nfl-webscraper")
 except _md.PackageNotFoundError:  # pragma: no cover - dev editable fallback
-	__version__ = "0.0.0+dev"
+	__version__ = "0.1.2"
 
 __all__ = ["get_all_player_stats", "get_all_team_stats", "__version__"]
