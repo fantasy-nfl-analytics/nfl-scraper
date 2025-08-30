@@ -3,7 +3,7 @@ name = "nflScraping"
 description = "Scrape NFL player and team statistics (multi-year, async, Polars)."
 readme = "README.md"
 license = { file = "LICENSE" }
-version = "0.1.0"
+version = "0.1.1"
 authors = [ { name = "Joshua Gorton", email = "jgorton1337@gmail.com" } ]
 requires-python = ">=3.13"
 dependencies = [
