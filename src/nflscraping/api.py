@@ -1,4 +1,8 @@
-"""Public API surface for nflscraping."""
+"""Public API surface.
+
+Distribution name: nfl-webscraper (install)
+Import: import nflscraping
+"""
 from __future__ import annotations
 import asyncio
 import re

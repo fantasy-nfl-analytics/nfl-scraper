@@ -1,9 +1,9 @@
 [project]
-name = "nflscraping"
+name = "nfl-webscraper"
 description = "Scrape NFL player and team statistics (multi-year, async, Polars)."
 readme = "README.md"
 license = { file = "LICENSE" }
-version = "0.1.1"
+dynamic = ["version"]
 authors = [ { name = "Joshua Gorton", email = "jgorton1337@gmail.com" } ]
 requires-python = ">=3.13"
 dependencies = [
@@ -26,9 +26,9 @@ keywords = ["nfl","scraping","stats","football","polars","httpx"]
 dev = ["pytest>=8.0.0"]
 
 [project.urls]
-Homepage = "https://github.com/yourname/nflScraping"
-Repository = "https://github.com/yourname/nflScraping"
-Issues = "https://github.com/yourname/nflScraping/issues"
+Homepage = "https://github.com/fantasy-nfl-analytics/nfl-webscraper/"
+Repository = "https://github.com/fantasy-nfl-analytics/nfl-webscraper/"
+Issues = "https://github.com/fantasy-nfl-analytics/nfl-webscraper/issues"
 
 [tool.uv]
 # UV settings (dependencies resolved via [project.dependencies])

@@ -1,4 +1,7 @@
-"""Custom exception types for the nflscraping package."""
+"""Custom exception types.
+
+Distribution: nfl-webscraper; import package: nflscraping
+"""
 from __future__ import annotations
 
 class ScraperError(Exception):
