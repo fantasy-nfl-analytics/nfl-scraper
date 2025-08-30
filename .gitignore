@@ -1,0 +1,67 @@
+# ---- Python bytecode / caches ----
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ---- Virtual environments ----
+.venv/
+venv/
+env/
+ENV/
+
+# ---- Distribution / packaging ----
+build/
+dist/
+.eggs/
+*.egg-info/
+*.egg
+wheelhouse/
+
+# ---- Logs / reports ----
+*.log
+coverage.xml
+.coverage*
+htmlcov/
+
+# ---- Test / tooling caches ----
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pdm-build/
+.cache/
+.pylint.d/
+
+# ---- Editors / IDE ----
+.vscode/
+.idea/
+*.code-workspace
+
+# ---- OS junk ----
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- Local scripts / scratch ----
+*.swp
+*.swo
+
+# ---- Generated artifacts ----
+*.spec
+
+# ---- Node (if added later) ----
+node_modules/
+
+# ---- Data dumps (adjust if you commit sample outputs) ----
+*.parquet
+*.csv
+
+# Keep lockfile (uv.lock) tracked for reproducibility
+# If you truly want to ignore it uncomment below
+# uv.lock
+
+# ---- Coverage / profiling ----
+.prof
+.profraw
+
+# ---- Temporary notebooks/exports ----
+*.ipynb_checkpoints/

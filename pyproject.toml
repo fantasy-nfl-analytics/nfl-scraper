@@ -1,0 +1,44 @@
+[project]
+name = "nflScraping"
+description = "Scrape NFL player and team statistics (multi-year, async, Polars)."
+readme = "README.md"
+license = { file = "LICENSE" }
+version = "0.1.0"
+authors = [ { name = "Joshua Gorton", email = "jgorton1337@gmail.com" } ]
+requires-python = ">=3.13"
+dependencies = [
+    "beautifulsoup4>=4.13.5",
+    "httpx[http2]>=0.28.1",
+    "polars>=1.32.3",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.13",
+    "Intended Audience :: Developers",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Software Development :: Libraries",
+    "License :: OSI Approved :: MIT License",
+    "Typing :: Typed",
+]
+keywords = ["nfl","scraping","stats","football","polars","httpx"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0.0"]
+
+[project.urls]
+Homepage = "https://github.com/yourname/nflScraping"
+Repository = "https://github.com/yourname/nflScraping"
+Issues = "https://github.com/yourname/nflScraping/issues"
+
+[tool.uv]
+# UV settings (dependencies resolved via [project.dependencies])
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
