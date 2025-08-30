@@ -1,5 +1,5 @@
 [project]
-name = "nflScraping"
+name = "nfl-webscraper"
 description = "Scrape NFL player and team statistics (multi-year, async, Polars)."
 readme = "README.md"
 license = { file = "LICENSE" }
@@ -34,11 +34,7 @@ Issues = "https://github.com/yourname/nflScraping/issues"
 # UV settings (dependencies resolved via [project.dependencies])
 
 [build-system]
-requires = ["setuptools>=68"]
-build-backend = "setuptools.build_meta"
+requires = ["uv_build >= 0.7.19, <0.9.0"]
+build-backend = "uv_build"
 
-[tool.setuptools]
-package-dir = {"" = "src"}
-
-[tool.setuptools.packages.find]
-where = ["src"]
+## Removed setuptools config (uv_build handles packaging).
