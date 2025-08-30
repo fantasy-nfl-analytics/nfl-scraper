@@ -3,7 +3,7 @@
 Async scraper for NFL player & team stats using httpx + Polars.
 
 Distribution name: `nfl-webscraper`
-Import name: `nflscraping`
+Import name: `nfl_webscraper`
 
 ## Quick start
 
@@ -21,8 +21,8 @@ uv sync --extra dev
 
 Usage (Python):
 ```python
-import nflscraping as ns
-players = ns.get_all_player_stats([2023])
+import nfl_webscraper as nws
+players = nws.get_all_player_stats([2023])
 print(players.head())
 ```
 
