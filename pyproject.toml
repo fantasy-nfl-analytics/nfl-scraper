@@ -1,5 +1,5 @@
 [project]
-name = "nfl-webscraper"
+name = "nflscraping"
 description = "Scrape NFL player and team statistics (multi-year, async, Polars)."
 readme = "README.md"
 license = { file = "LICENSE" }
