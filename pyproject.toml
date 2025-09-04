@@ -3,12 +3,13 @@ name = "nfl-webscraper"
 description = "Scrape NFL player and team statistics (multi-year, async, Polars)."
 readme = "README.md"
 license = { file = "LICENSE" }
-version = "0.1.2"
+version = "0.1.3"
 authors = [ { name = "Joshua Gorton", email = "jgorton1337@gmail.com" } ]
 requires-python = ">=3.13"
 dependencies = [
     "beautifulsoup4>=4.13.5",
     "httpx[http2]>=0.28.1",
+    "marimo>=0.15.2",
     "polars>=1.32.3",
 ]
 classifiers = [
@@ -23,7 +24,10 @@ classifiers = [
 keywords = ["nfl","scraping","stats","football","polars","httpx"]
 
 [project.optional-dependencies]
-dev = ["pytest>=8.0.0"]
+dev = [
+    "pytest>=8.0.0",
+    "ruff>=0.12.11",
+]
 
 [project.urls]
 Homepage = "https://github.com/fantasy-nfl-analytics/nfl-webscraper/"
@@ -32,6 +36,55 @@ Issues = "https://github.com/fantasy-nfl-analytics/nfl-webscraper/issues"
 
 [tool.uv]
 # UV settings (dependencies resolved via [project.dependencies])
+
+[tool.ruff]
+# Core formatting & linting configuration.
+target-version = "py313"
+line-length = 100
+src = ["src"]
+extend-exclude = ["build", "dist", ".venv"]
+
+[tool.ruff.format]
+# Use Ruff as the code formatter (optional; run `ruff format`).
+quote-style = "single"
+docstring-code-format = true
+indent-style = "tab"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+
+[tool.ruff.lint]
+# Rule selection strategy: start with a focused, high-signal set.
+select = [
+    "E",   # pycodestyle errors
+    "F",   # pyflakes
+    "W",   # pycodestyle warnings
+    "B",   # flake8-bugbear
+    "I",   # isort (import sorting)
+    "UP",  # pyupgrade
+    "N",   # pep8-naming
+    "PL",  # (subset of) pylint-like checks
+]
+ignore = [
+    "E203",  # Whitespace before ':' (black compatibility / formatter-friendly)
+    "E501",  # Line length (handled by formatter; enforce softly via line-length)
+    "PLR0913", # Too many arguments (may be acceptable in data functions)
+    "W191",  # Indentation contains tabs (we use tabs)
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["nfl_webscraper"]
+combine-as-imports = true
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = [
+    "S101",   # Allow assert statements in tests (if security plugin added later)
+    "PLR2004", # Magic value usage (tests often contain literals)
+]
+
+# Optional: Uncomment to enable docstring style checking later.
+# [tool.ruff.lint.pydocstyle]
+# convention = "google"  # or "numpy"
+
 
 [build-system]
 requires = ["uv_build >= 0.7.19, <0.9.0"]
